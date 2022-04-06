@@ -9,5 +9,6 @@ ssh ubuntu@13.127.190.179<<EOF
     npm install
     npm install pm2 -g
     pm2 restart ecosystem.config.js
+    node index.js
     exit
 EOF

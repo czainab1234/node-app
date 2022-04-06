@@ -7,7 +7,7 @@ ssh ubuntu@13.127.190.179<<EOF
     . ~/.nvm/nvm.sh
     nvm install v9.4.0
     npm install
-    npm install -g nodemon pm2
+    npm install pm2 -g
     pm2 restart ecosystem.config.js
     exit
 EOF

@@ -1,28 +1,21 @@
 pipeline {
-  agent any
-    
-  tools {nodejs "node"}
-    
-  stages {
-        
-    stage('Git') {
-      steps {
-        git 'https://github.com/czainab1234/node-app.git'
-      }
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                'npm install'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
     }
-     
-    stage('Build') {
-      steps {
-        sh 'npm install'
-         
-      }
-    }  
-    
-            
-    stage('Test') {
-      steps {
-        sh './jenkins/scripts/test'
-      }
-    }
-  }
 }

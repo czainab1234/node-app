@@ -4,17 +4,17 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                sh 'npm install'
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                sh './jenkins/scripts/test'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                sh './jenkins/scripts/deploy'
             }
         }
     }

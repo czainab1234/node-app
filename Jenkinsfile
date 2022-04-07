@@ -4,17 +4,17 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'npm install'
+                npm install
             }
         }
         stage('Test') {
             steps {
-                sh './jenkins/scripts/test'
+                 ./jenkins/scripts/test
             }
         }
         stage('Deploy') {
             steps {
-                sh './jenkins/scripts/deploy'
+                 ./jenkins/scripts/deploy
             }
         }
     }

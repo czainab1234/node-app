@@ -13,6 +13,10 @@
            "fsevents": "^2.3.2"
      },
      "devDependencies": {
+         "nodemon": "^1.18.9",
+        "sonarqube-scanner": "^2.7.0"
+  },
+     "devDependencies": {
           "mocha": "^5.2.0",
           "supertest": "^3.3.0"
      }

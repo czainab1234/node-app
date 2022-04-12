@@ -20,7 +20,7 @@ pipeline {
         
       stage('ExecuteSonarQubeReport') {
           steps{
-             nodejs(nodeJSInstallationName: 'nodejs17.8.0') {
+             nodejs(nodeJSInstallationName: 'nodejs15.2.01') {
              sh 'npm run sonar'
     }
           }

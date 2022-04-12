@@ -18,16 +18,12 @@ pipeline {
             }
         }
         
-       stage('SonarQube analysis') {
-//    def scannerHome = tool 'SonarScanner 4.7.0';
-        steps{
-        withSonarQubeEnv('sonarqube-7.9.6') { 
-        // If you have configured more than one global server connection, you can specify its name
-//      sh "${scannerHome}/bin/sonar-scanner"
-        sh "mvn sonar:sonar"
+      stage('ExecuteSonarQubeReport') {
+     nodejs(nodeJSInstallationName: 'nodejs17.8.0') {
+        sh 'npm run sonar'
     }
-        }
-        } 
+          
+      }
             
     }
 }

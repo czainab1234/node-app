@@ -6,7 +6,7 @@ sonarqubeScanner({
 	    'sonar.projectDescription': 'Pipeline node-js -pipeline',
 	    'sonar.projectName': 'Pipeline node-js -pipeline',
 	    'sonar.projectKey':'NodeJsMithunTechnologies',
-	    'sonar.login': efc2443e6cf06a342f144bf5abad17ef6f545328'',
+	    'sonar.login': 'efc2443e6cf06a342f144bf5abad17ef6f545328',
 	    //'sonar.login': 'admin',
 	    //'sonar.password': 'admin',
             'sonar.projectVersion':'1.0',

@@ -20,6 +20,7 @@ pipeline {
         stage('ExecuteSonarQubeReport') {
          steps {
              script{
+                sh 'npm i'
                 sh 'npm run sonar'
     }
       

@@ -19,9 +19,11 @@ pipeline {
         }
         stage('ExecuteSonarQubeReport') {
          steps {
-        sh 'npm run sonar'
+             script{
+                sh 'npm run sonar'
     }
       
+        }
         }
     }  
    }

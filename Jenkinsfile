@@ -17,7 +17,12 @@ pipeline {
                 echo 'Deploying....'
             }
         }
-        
+        stage('ExecuteSonarQubeReport') {
+     nodejs(node: 'Nodejs7.8.0') {
+        sh 'npm run sonar'
+    }
+      
+        }
     }  
    }
 

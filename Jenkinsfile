@@ -18,6 +18,12 @@ pipeline {
             }
         }
         
+        stage('ExecuteSonarQubeReport') {
+             steps {
+        sh 'npm run sonar'
+    }
+      
+        } 
       
       
             
